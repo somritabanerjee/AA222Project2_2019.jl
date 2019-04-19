@@ -37,7 +37,7 @@ end
 function check_constraints(c, x::Vector)
     vals = c(x)
     COUNTERS[String(typeof(c).name.mt.name)] -= 1
-    return all(vals .> 0)
+    return all(vals .<= 0)
 end
 
 """
