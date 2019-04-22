@@ -140,7 +140,7 @@ function main(mode::String, pidx::Int, repeat::Int)
 
                 x_star_hat = opt_func(prob.f, prob.g, prob.c, prob.x0(), prob.n, "$(mode)_$(pidx)")
                 neval, ceval, score = get_score(prob.f, prob.g, prob.c, x_star_hat, prob.n)
-                push!(errors, "")
+                push!(errors, err[])
             catch e
                 push!(errors, "$(e)")
                 x_star_hat = typemin(Int32)
