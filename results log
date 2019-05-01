@@ -1,0 +1,86 @@
+julia --project -e "using Pkg; Pkg.resolve()"
+
+julia --color=yes --project -e 'using AA222Project2_2019; AA222Project2_2019.main("simple", 1, 1000)' project2.jl 
+julia --color=yes --project -e 'using AA222Project2_2019; AA222Project2_2019.main("simple", 2, 1000)' project2.jl 
+julia --color=yes --project -e 'using AA222Project2_2019; AA222Project2_2019.main("simple", 3, 1000)' project2.jl 
+
+Baseline results:
+
+julia --color=yes --project -e 'using AA222Project2_2019; AA222Projec
+t2_2019.main("simple", 1, 1000)' project2.jl 
+[ Info: Including Julia file
+===================
+Mode: simple
+Problem: 1
+-------------------
+Max Num Function (and Gradient) Evals: 500
+Max Num Constraint Function Evals: 579
+Avg Score: 0.2615526815854302
+===================
+
+
+julia --color=yes --project -e 'using AA222Project2_2019; AA222Projec
+t2_2019.main("simple", 2, 1000)' project2.jl 
+[ Info: Including Julia file
+===================
+Mode: simple
+Problem: 2
+-------------------
+Max Num Function (and Gradient) Evals: 500
+Max Num Constraint Function Evals: 582
+Avg Score: -3.824985424564643
+===================
+
+julia --color=yes --project -e 'using AA222Project2_2019; AA222Projec
+t2_2019.main("simple", 3, 1000)' project2.jl 
+[ Info: Including Julia file
+===================
+Mode: simple
+Problem: 3
+-------------------
+Max Num Function (and Gradient) Evals: 500
+Max Num Constraint Function Evals: 574
+Avg Score: 1.6809371733235292
+===================
+
+
+After changes to the file so exactly 1000 evals are taken 
+julia --color=yes --project -e 'using AA222Project2_2019; AA222Projec
+t2_2019.main("simple", 1, 1000)' project2.jl 
+[ Info: Including Julia file
+===================
+Mode: simple
+Problem: 1
+-------------------
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: 0.2615526815854302
+===================
+
+julia --color=yes --project -e 'using AA222Project2_2019; AA222Projec
+t2_2019.main("simple", 2, 1000)' project2.jl 
+[ Info: Including Julia file
+===================
+Mode: simple
+Problem: 2
+-------------------
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: -3.7556059604000556
+===================
+
+julia --color=yes --project -e 'using AA222Project2_2019; AA222Projec
+t2_2019.main("simple", 3, 1000)' project2.jl 
+[ Info: Including Julia file
+===================
+Mode: simple
+Problem: 3
+-------------------
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: 1.6809371733235292
+===================
+
+
+
+
