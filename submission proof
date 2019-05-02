@@ -1,0 +1,55 @@
+[Executed at: Wed May 1 21:27:40 PDT 2019]
+
+Found Julia version!
+Running 5 evaluations for quick feedback!
+[ Info: Including Julia file
+===================
+Mode: simple
+Problem: 1
+-------------------
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: 0.2338662911836193
+===================
+[ Info: Including Julia file
+===================
+Mode: simple
+Problem: 2
+-------------------
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: -5.624797031559348
+===================
+[ Info: Including Julia file
+===================
+Mode: simple
+Problem: 3
+-------------------
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: 1.50382823565752
+===================
+[ Info: Including Julia file
+===================
+Mode: secret
+Problem: 1
+-------------------
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: 158.29562125985518
+===================
+[ Info: Including Julia file
+===================
+Mode: secret
+Problem: 2
+-------------------
+Error: (1, "Constraints not satisfied!") 
+(2, "Constraints not satisfied!") 
+(3, "Constraints not satisfied!") 
+(4, "Constraints not satisfied!") 
+(5, "Constraints not satisfied!")
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: -2.147483648e9
+===================
+Found README.pdf. Thanks!
