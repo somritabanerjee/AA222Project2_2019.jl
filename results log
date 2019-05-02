@@ -82,5 +82,30 @@ Avg Score: 1.6809371733235292
 ===================
 
 
-
+On Vocareum- 
+[ Info: Including Julia file
+===================
+Mode: secret
+Problem: 1
+-------------------
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: 158.29562125985518
+===================
+[ Info: Including Julia file
+===================
+Mode: secret
+Problem: 2
+-------------------
+Error: (1, "Constraints not satisfied!") 
+(2, "Constraints not satisfied!") 
+(3, "Constraints not satisfied!") 
+(4, "Constraints not satisfied!") 
+(5, "Constraints not satisfied!")
+Max Num Function (and Gradient) Evals: 1000
+Max Num Constraint Function Evals: 1000
+Avg Score: -2.147483648e9
+===================
+No README.pdf found.
+Remember to upload README.pdf in the final submission
 

@@ -12,7 +12,7 @@ Arguments:
 """
 function optimize(f, g, c, x0, n, prob)
     p = squared_sum_penalty_function(c)
-    x_best = penalty_method(f, p, x0, n)
+    x_best, xlist = penalty_method(f, p, x0, n)
     return x_best
 end
 
@@ -35,12 +35,15 @@ end
 function penalty_method(f, p, x, n; ρ=1, γ=2)
     numEvalsLeft = n
     hj_max_eval = 10;
+    xlist = Array{Float64}[]
+    push!(xlist, x)
     while numEvalsLeft >= hj_max_eval
         x, evalsUsed, feasFound = hooke_jeeves(f, ρ, p, x, hj_max_eval)
+        push!(xlist, x)
         numEvalsLeft = numEvalsLeft - evalsUsed
         ρ *= γ
     end
-    return x
+    return x,xlist
 end
 
 function last_feasible_x(currXFeas, x, feasFound, last_x_feas)
@@ -118,23 +121,3 @@ function hooke_jeeves(f, ρ, p, x, maxEval; α=1, γ=0.5)
     end
     return last_x_feas, evalsUsed, feasFound
 end
-
-
-# function simple1(x::Vector)
-#     return -x[1] * x[2]
-# end
-
-# function grad(x::Vector)
-#     return 0
-# end
-
-# function simple1_constraints(x::Vector)
-#     return [x[1] + x[2]^2 - 1,
-#             -x[1] - x[2]]
-# end
-
-# function simple1_init()
-#     return rand(2) * 2.0
-# end
-
-# optimize(simple1, grad, simple1_constraints, simple1_init(), 1000, "simple_1")
